@@ -3,7 +3,7 @@ import {
   ConnectionProvider,
   WalletProvider,
 } from "@solana/wallet-adapter-react"
-import { clusterApiUrl } from '@solana/web3.js'
+import { clusterApiUrl } from '@solana/web3.js';
 import {
   BackpackWalletAdapter,
   BraveWalletAdapter,
@@ -19,6 +19,7 @@ import {
   SpotWalletAdapter,
   TorusWalletAdapter,
 } from "@solana/wallet-adapter-wallets"
+import { WalletAdapterNetwork } from '@solana/wallet-adapter-base';
 import { WalletModalProvider } from "@solana/wallet-adapter-react-ui"
 
 // Default styles that can be overridden by your app
