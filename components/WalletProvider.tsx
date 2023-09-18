@@ -24,7 +24,9 @@ import { WalletModalProvider } from "@solana/wallet-adapter-react-ui"
 require("@solana/wallet-adapter-react-ui/styles.css")
 
 const Wallet = ({ children }: { children: React.ReactChild }) => {
-  const endpoint = "https://api.devnet.solana.com"
+
+  
+  const endpoint = useMemo(() => clusterApiUrl(network), [network]);  
 
   const wallets = useMemo(
     () => [
@@ -50,7 +52,7 @@ const Wallet = ({ children }: { children: React.ReactChild }) => {
       new CoinhubWalletAdapter(),
       new CoinbaseWalletAdapter(),
     ],
-    []
+    [network]
   )
 
   return (
