@@ -26,7 +26,7 @@ require("@solana/wallet-adapter-react-ui/styles.css")
 
 const Wallet = ({ children }: { children: React.ReactChild }) => {
 
-  
+  const network = WalletAdapterNetwork.Mainnet;
   const endpoint = useMemo(() => clusterApiUrl(network), [network]);  
 
   const wallets = useMemo(
