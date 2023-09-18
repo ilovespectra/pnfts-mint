@@ -3,6 +3,7 @@ import {
   ConnectionProvider,
   WalletProvider,
 } from "@solana/wallet-adapter-react"
+import { clusterApiUrl } from '@solana/web3.js'
 import {
   BackpackWalletAdapter,
   BraveWalletAdapter,
